@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{33E464A2-1599-4D09-9D07-E2FB1B82AD1E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ExampleBrowser</RootNamespace>
+    <AssemblyName>ExampleBrowser</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OpenTK, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL" />
+    <Reference Include="OpenTK.Compatibility, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL" />
+    <Reference Include="SlimDX" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\ImageBrick.cs" />
+    <Compile Include="Examples\OpenTK\Advanced\GsShrinky.cs" />
+    <Compile Include="Examples\OpenTK\Advanced\GsSimple.cs" />
+    <Compile Include="Examples\OpenTK\Basic\Bulge.cs" />
+    <Compile Include="Examples\OpenTK\Basic\SpecularBumpMap.cs" />
+    <Compile Include="Examples\OpenTK\Basic\FragmentLighting.cs" />
+    <Compile Include="Examples\OpenTK\Advanced\IncludeString.cs" />
+    <Compile Include="Examples\OpenTK\Basic\ProjectiveTexturing.cs" />
+    <Compile Include="Examples\OpenTK\Basic\VertexLighting.cs" />
+    <Compile Include="Examples\SlimDX\Basic\VertexFragmentProgram.cs" />
+    <Compile Include="Examples\OpenTK\Example.cs" />
+    <Compile Include="Examples\SlimDX\Example.cs" />
+    <Compile Include="Examples\ExampleDescriptionAttribute.cs" />
+    <Compile Include="Examples\IExample.cs" />
+    <Compile Include="Data\ImageDemon.cs" />
+    <Compile Include="Data\ImageNormcm.cs" />
+    <Compile Include="Examples\OpenTK\Basic\BumpMapWall.cs" />
+    <Compile Include="Examples\OpenTK\Basic\ParticleSystem.cs" />
+    <Compile Include="Examples\OpenTK\Basic\TwoTextureAccesses.cs" />
+    <Compile Include="Examples\OpenTK\Basic\VaryingParameter.cs" />
+    <Compile Include="Examples\OpenTK\Basic\VertexProgram.cs" />
+    <Compile Include="Examples\OpenTK\Basic\VertexTransform.cs" />
+    <Compile Include="Examples\OpenTK\Basic\VertexTwisting.cs" />
+    <Compile Include="ExampleSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExampleSelector.Designer.cs">
+      <DependentUpon>ExampleSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NativeMethods.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Examples\OpenTK\Basic\UniformParameter.cs" />
+    <Compile Include="Examples\OpenTK\Basic\VertexAndFragmentProgram.cs" />
+    <Compile Include="Examples\OpenTK\Basic\TextureSampling.cs" />
+    <EmbeddedResource Include="ExampleSelector.resx">
+      <DependentUpon>ExampleSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Data\C2E1v_green.cg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\C2E2f_passthru.cg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\C3E1v_anycolor.cg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\C3E2v_varying.cg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\C3E3f_texture.cg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\C3E4v_twist.cg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\C3E5v_twoTextures.cg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\C3E6f_twoTextures.cg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\C4E1v_transform.cg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\C5E1v_basicLight.cg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\C5E2v_fragmentLighting.cg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\C5E3f_basicLight.cg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\C6E1v_bulge.cg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\C6E2v_particle.cg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\C8E1v_bumpWall.cg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\C8E2f_bumpSurf.cg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\C8E3v_specWall.cg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\C8E4f_specSurf.cg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\C9E5v_projTex.cg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\C9E6f_projTex.cg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\gs_shrinky.cg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\gs_simple.cg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CgNet.OpenTK\CgNet.OpenTK.csproj">
+      <Project>{BA459981-3292-4716-954D-E21BD06A8B0B}</Project>
+      <Name>CgNet.OpenTK</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CgNet.SlimDX\CgNet.SlimDX.csproj">
+      <Project>{69FF2AB3-3BD1-4B96-92DE-28DEA92D6A14}</Project>
+      <Name>CgNet.SlimDX</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CgNet\CgNet.csproj">
+      <Project>{8F858C68-C03F-4394-8FDE-B6BA2B9EBA99}</Project>
+      <Name>CgNet</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
